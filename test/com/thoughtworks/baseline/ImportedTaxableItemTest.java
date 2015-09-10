@@ -12,4 +12,11 @@ public class ImportedTaxableItemTest {
 
         assertEquals(0.75, importedTaxableItem.totalTax(), 0.0);
     }
+
+    @Test
+    public void shouldRightlyShowTotalPrice() {
+        ImportedTaxableItem importedTaxableItem = new ImportedTaxableItem(1, "imported perfume", 5.0);
+
+        assertEquals(5.75, importedTaxableItem.totalPrice(), 0.0);
+    }
 }
