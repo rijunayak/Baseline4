@@ -29,4 +29,12 @@ public class LineParserTest {
 
         assertEquals(unimportedUntaxableItem.toString(), lineParser.parseLine().toString());
     }
+
+    @Test
+    public void shouldGetCorrectlyUnimportedTaxableItemOnParsingLine() {
+        LineParser lineParser = new LineParser("1 perfume at 14.59");
+        UnimportedTaxableItem unimportedTaxableItem = new UnimportedTaxableItem(1, "perfume", 14.59);
+
+        assertEquals(unimportedTaxableItem.toString(), lineParser.parseLine().toString());
+    }
 }

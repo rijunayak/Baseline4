@@ -29,6 +29,8 @@ public class LineParser {
         } else {
             if(itemName.contains("book") || itemName.contains("chocolate") || itemName.contains("headache pill")) {
                 taxableItem = new UnimportedUntaxableItem(quantity, itemName, price);
+            } else {
+                taxableItem = new UnimportedTaxableItem(quantity, itemName, price);
             }
         }
         return taxableItem;
