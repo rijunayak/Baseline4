@@ -22,7 +22,7 @@ public class UnimportedTaxableItem implements TaxableItem {
 
     @Override
     public double totalPrice() {
-        return 0.0;
+        return roundOff(totalTax() + price);
     }
 
     private double roundOff(double value) {
