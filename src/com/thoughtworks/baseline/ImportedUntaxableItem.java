@@ -3,7 +3,8 @@ package com.thoughtworks.baseline;
 
 import static java.lang.Math.ceil;
 
-public class ImportedUntaxableItem {
+public class ImportedUntaxableItem implements TaxableItem {
+
     private int quantity;
     private String itemName;
     private double price;
@@ -14,10 +15,12 @@ public class ImportedUntaxableItem {
         this.price = price;
     }
 
+    @Override
     public double totalTax() {
         return roundOff(price * 0.05);
     }
 
+    @Override
     public double totalPrice() {
         return roundOff(totalTax() + price);
     }
