@@ -23,6 +23,8 @@ public class LineParser {
         if(itemName.contains("imported")) {
             if(itemName.contains("book") || itemName.contains("chocolate") || itemName.contains("headache pill")) {
                 taxableItem = new ImportedUntaxableItem(quantity, itemName, price);
+            } else {
+                taxableItem = new ImportedTaxableItem(quantity, itemName, price);
             }
         }
         return taxableItem;
