@@ -19,4 +19,9 @@ public class UnimportedUntaxableItem {
     public double totalPrice() {
         return price;
     }
+
+    @Override
+    public String toString() {
+        return quantity + " " + itemName + ": " + price;
+    }
 }

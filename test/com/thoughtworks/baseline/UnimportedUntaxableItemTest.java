@@ -19,4 +19,11 @@ public class UnimportedUntaxableItemTest {
 
         assertEquals(5.0, unimportedUntaxableItem.totalPrice(), 0.0);
     }
+
+    @Test
+    public void shouldReturnCorrectString() {
+        UnimportedUntaxableItem unimportedUntaxableItem = new UnimportedUntaxableItem(1, "book", 5);
+
+        assertEquals("1 book: 5.0", unimportedUntaxableItem.toString());
+    }
 }
