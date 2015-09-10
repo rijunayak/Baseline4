@@ -22,6 +22,11 @@ public class ImportedUntaxableItem {
         return roundOff(totalTax() + price);
     }
 
+    @Override
+    public String toString() {
+        return quantity + " " + itemName + ": " + totalPrice();
+    }
+
     private double roundOff(double value) {
         return ceil(value * 20) / 20;
     }
