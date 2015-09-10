@@ -19,4 +19,11 @@ public class ImportedTaxableItemTest {
 
         assertEquals(5.75, importedTaxableItem.totalPrice(), 0.0);
     }
+
+    @Test
+    public void shouldRightlyHaveEntry() {
+        ImportedTaxableItem importedTaxableItem = new ImportedTaxableItem(1, "imported perfume", 5.0);
+
+        assertEquals("1 imported perfume: 5.75", importedTaxableItem.toString());
+    }
 }
