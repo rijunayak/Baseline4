@@ -21,4 +21,12 @@ public class LineParserTest {
 
         assertEquals(importedTaxableItem.toString(), lineParser.parseLine().toString());
     }
+
+    @Test
+    public void shouldGetCorrectUnimportedUntaxableItemOnParsingLine() {
+        LineParser lineParser = new LineParser("1 book at 14.59");
+        UnimportedUntaxableItem unimportedUntaxableItem = new UnimportedUntaxableItem(1, "book", 14.59);
+
+        assertEquals(unimportedUntaxableItem.toString(), lineParser.parseLine().toString());
+    }
 }

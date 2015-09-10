@@ -26,6 +26,10 @@ public class LineParser {
             } else {
                 taxableItem = new ImportedTaxableItem(quantity, itemName, price);
             }
+        } else {
+            if(itemName.contains("book") || itemName.contains("chocolate") || itemName.contains("headache pill")) {
+                taxableItem = new UnimportedUntaxableItem(quantity, itemName, price);
+            }
         }
         return taxableItem;
     }
