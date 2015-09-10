@@ -18,6 +18,10 @@ public class ImportedUntaxableItem {
         return roundOff(price * 0.05);
     }
 
+    public double totalPrice() {
+        return roundOff(totalTax() + price);
+    }
+
     private double roundOff(double value) {
         return ceil(value * 20) / 20;
     }

@@ -12,4 +12,11 @@ public class ImportedUntaxableItemTest {
 
         assertEquals(0.25, importedUntaxableItem.totalTax(), 0.0);
     }
+
+    @Test
+    public void shouldReturnCorrectTotalPrice() {
+        ImportedUntaxableItem importedUntaxableItem = new ImportedUntaxableItem(1, "imported book", 5.0);
+
+        assertEquals(5.25, importedUntaxableItem.totalPrice(), 0.0);
+    }
 }
