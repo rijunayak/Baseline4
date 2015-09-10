@@ -15,4 +15,8 @@ public class UnimportedUntaxableItem {
     public double totalTax() {
         return 0;
     }
+
+    public double totalPrice() {
+        return price;
+    }
 }
